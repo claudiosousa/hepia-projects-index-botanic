@@ -3,17 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('indexbotanic', ['ionic'])
+angular.module('indexbotanic', ['ionic', 'backend.firebase'])
 
   .run(function ($ionicPlatform, $rootScope) {
-
-    $rootScope.tasks = [
-      { title: 'asdf' },
-      { title: 'asdf2' },
-      { title: 'asdf3' },
-      { title: 'asdf4' },
-      { title: 'asdf5' },
-    ]
 
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
