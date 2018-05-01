@@ -20,7 +20,7 @@ angular.module('backend.firebase', [])
                     .get()
                     .then(doc => {
                         if (doc.empty)
-                            throw 'Plant for RFID not found.';
+                            throw 'Plante ID (' + rfidId + ') not found';
                         return doc.docs[0].data()
                     })
         }

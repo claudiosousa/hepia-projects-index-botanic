@@ -23,3 +23,25 @@ angular.module('indexbotanic', ['ionic', 'backend.firebase'])
       }
     });
   })
+  .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('scan', {
+                url: '/',
+                templateUrl: 'templates/scan.html',
+                controller: 'scanController',
+                controllerAs: 'ctrl'
+            })
+            .state('load', {
+                url: '/load/:rfid',
+                templateUrl: 'templates/load.html',
+                controller: 'loadController',
+                controllerAs: 'ctrl'
+            })
+            .state('info', {
+                url: "/info",
+                templateUrl: "templates/info.html",
+                controller: "infoController",
+                controllerAs: 'ctrl'
+            });
+        $urlRouterProvider.otherwise('/');
+    })

@@ -1,5 +1,5 @@
 {
-  "name": "ionic",
+  "name": "indexbotanic",
   "version": "0.0.1",
   "description": "An Ionic project",
   "devDependencies": {
@@ -8,8 +8,8 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^3.1.0"
   },
-  "scripts":{
-    "start":"ionic serve"
+  "scripts": {
+    "start": "ionic serve"
   },
   "dependencies": {
     "cordova-android": "7.0.0",
@@ -17,7 +17,8 @@
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-splashscreen": "^5.0.2",
-    "cordova-plugin-whitelist": "^1.3.3"
+    "cordova-plugin-whitelist": "^1.3.3",
+    "ionic": "^3.20.0"
   },
   "cordova": {
     "plugins": {
