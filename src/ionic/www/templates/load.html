@@ -1,5 +1,9 @@
 <ion-view>
-  <ion-content class="has-header">
-    <p>{{ctrl.rfid}}</p>
+  <ion-content class="has-header text-center">
+    <p class="etiquette">
+      Étiquette trouvée: {{ctrl.rfid}} <br /><br />
+      Chargement des données... Veuillez patienter...
+    </p>
+    <ion-spinner></ion-spinner>
   </ion-content>
 </ion-view>

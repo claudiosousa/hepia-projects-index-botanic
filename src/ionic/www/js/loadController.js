@@ -5,6 +5,7 @@ class loadController {
         this.backend = backend;
         this.$state = $state;
         this.$stateParams = $stateParams;
+        this.rfid = null;
 
         this.loadPlant();
 

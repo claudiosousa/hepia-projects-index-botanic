@@ -1,6 +1,6 @@
 class infoController {
 
-    constructor($timeout, backend, $rootScope) {
+    constructor($timeout, backend, $state, $rootScope) {
         this.$timeout = $timeout;
         this.backend = backend;
         this.plant = this.backend.plant;
@@ -12,6 +12,10 @@ class infoController {
                 }
             }.bind(this)
         )
+
+        if (this.plant == null) {
+            $state.go("scan");
+        }
     }
 }
 

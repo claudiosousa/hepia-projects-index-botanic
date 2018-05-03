@@ -1,1 +1,23 @@
 /* Empty. Add your own CSS if you like */
+ion-spinner * {
+    width: 30vh !important;
+    height: 30vh !important;
+    stroke: #444;
+    fill: #222;
+}
+
+.etiquette {
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+
+    border-width: 3px;
+    border-style: dashed;
+    border-radius: 26px;
+}
