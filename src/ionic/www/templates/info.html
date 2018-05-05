@@ -1,7 +1,26 @@
 <ion-view>
-  <ion-content class="has-header text-center">
-    <p>Info:</p>
-    <p>{{ctrl.plant}}</p>
+  <div class="bar bar-header bar-balanced">
+    <h1 class="title">{{ctrl.title}}</h1>
+  </div>
+  <ion-content class="has-header text-center" >
+    <div class="imgbox">
+      <ion-slide-box>
+        <ion-slide ng-repeat="imglink in ctrl.imgs">
+          <img ng-src="{{imglink}}" />
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <div>
+      <div ng-if="ctrl.generals.length > 0">
+      <p>Informations générales:</p>
+        <div>
+          <div class="row" ng-repeat="info_g in ctrl.generals">
+            <div class="col text-left balanced-bg">{{info_g.label}}:</div>
+            <div class="col text-left">{{info_g.value}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
 

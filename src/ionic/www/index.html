@@ -35,7 +35,7 @@
 </head>
 
 <body ng-app="indexbotanic">
-  <!-- Center content -->
+
   <ion-header-bar class="bar-dark" ng-controller="headerController as ctrl">
     <div class="h1 title">Index Botanic</div>
     <a class="button button-clear button-icon icon ion-home"
@@ -43,7 +43,7 @@
         ng-if="!ctrl.isAtHome()"></a>
   </ion-header-bar>
 
-  <ion-nav-view></ion-nav-view>
+  <ion-nav-view class="has-header"></ion-nav-view>
 </body>
 
 </html>

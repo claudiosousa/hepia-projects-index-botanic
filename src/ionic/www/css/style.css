@@ -1,13 +1,13 @@
-/* Empty. Add your own CSS if you like */
+/* User instructions and feedback */
 ion-spinner * {
-    width: 30vh !important;
-    height: 30vh !important;
+    width: 25vw !important;
+    height: 25vw !important;
     stroke: #444;
     fill: #222;
 }
 
 .etiquette {
-    width: 50vh;
+    width: 50vw;
     margin-left: auto;
     margin-right: auto;
 
@@ -15,9 +15,37 @@ ion-spinner * {
     margin-top: 30px;
     margin-bottom: 30px;
 
-    font-size: 20px;
+    font-size: 25px;
 
     border-width: 3px;
     border-style: dashed;
     border-radius: 26px;
+}
+
+/* Image slider */
+.imgbox {
+    max-width: 100vw;
+    max-height: 50vh;
+
+    margin-bottom: 15px;
+}
+.imgbox img {
+    max-width: 100vw;
+    max-height: 50vh;
+}
+
+/* Informations table */
+.col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+.col:last-child {
+    border-right: solid 1px grey;
+}
+.row {
+    padding: 0px;
+}
+.row:last-child .col {
+    border-bottom: solid 1px grey;
 }
