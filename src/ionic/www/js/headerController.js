@@ -1,4 +1,4 @@
-class headerController {
+class HeaderController {
 
     constructor($state) {
         this.$state = $state;
@@ -9,4 +9,4 @@ class headerController {
     }
 }
 
-angular.module('indexbotanic').controller('headerController', headerController);
+angular.module('indexbotanic').controller('headerController', HeaderController);

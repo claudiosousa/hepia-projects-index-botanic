@@ -12,13 +12,16 @@
     "start": "ionic serve"
   },
   "dependencies": {
+    "@ionic-native/nfc": "^4.7.0",
     "cordova-android": "7.0.0",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic": "^4.1.7",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "^1.3.3",
-    "ionic": "^3.20.0"
+    "ionic": "^3.20.0",
+    "phonegap-nfc": "^0.7.3"
   },
   "cordova": {
     "plugins": {
@@ -26,7 +29,16 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "phonegap-nfc": {},
+      "cordova-plugin-ionic": {
+        "APP_ID": "YOUR_APP_ID",
+        "CHANNEL_NAME": "YOUR_CHANNEL_NAME",
+        "UPDATE_METHOD": "background|auto|none",
+        "MAX_STORE": "2",
+        "WARN_DEBUG": "true",
+        "UPDATE_API": "https://api.ionicjs.com"
+      }
     },
     "platforms": [
       "android"

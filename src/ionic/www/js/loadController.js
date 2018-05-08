@@ -1,4 +1,4 @@
-class loadController {
+class LoadController {
 
     constructor($timeout, backend, $state, $stateParams, $rootScope) {
         this.$timeout = $timeout;
@@ -34,4 +34,4 @@ class loadController {
     }
 }
 
-angular.module('indexbotanic').controller('loadController', loadController);
+angular.module('indexbotanic').controller('loadController', LoadController);
