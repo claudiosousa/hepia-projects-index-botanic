@@ -33,12 +33,6 @@ angular.module('indexbotanic', ['ionic', 'backend.firebase'])
                 controller: 'scanController',
                 controllerAs: 'ctrl'
             })
-            .state('load', {
-                url: '/load/:rfid',
-                templateUrl: 'templates/load.html',
-                controller: 'loadController',
-                controllerAs: 'ctrl'
-            })
             .state('info', {
                 url: "/info",
                 templateUrl: "templates/info.html",

@@ -1,6 +1,18 @@
 <ion-view>
   <ion-content class="text-center">
-    <p class="etiquette">Approchez le téléphone de l'étiquette</p>
-    <p><a href="#" ui-sref="load({ rfid: 1234 })">[DEBUG] Plante 1234</a></p>
+    <div ng-if="ctrl.rfid == null">
+      <p class="etiquette">Approchez le téléphone de l'étiquette</p>
+      <!--<p>
+        <a href="#" ng-click="ctrl.loadPlant('04d38d1a432880')">[DEBUG] Plante 04d38d1a432880</a>
+      </p>-->
+    </div>
+    <div ng-if="ctrl.rfid != null">
+      <p class="etiquette">
+        Étiquette trouvée: {{ctrl.rfid}} <br /><br />
+        Chargement des données... <br />
+        Veuillez patienter...
+      </p>
+      <ion-spinner></ion-spinner>
+    </div>
   </ion-content>
 </ion-view>
