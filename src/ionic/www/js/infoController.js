@@ -5,8 +5,10 @@ class InfoController {
         this.backend = backend;
 
         this.title = "";
+        this.desc = "";
+        this.ref = "#";
         this.imgs = [];
-        this.generals = [];
+        this.infos = [];
 
         $rootScope.$on('$stateChangeSuccess',
             function (event, toState, toParams, fromState, fromParams) {
@@ -26,10 +28,19 @@ class InfoController {
         this.plant = this.backend.plant;
         if (this.plant != null) {
             this.title = this.plant.name;
+            this.desc = this.plant.description;
+            this.ref = this.plant.ref;
             this.imgs = [this.plant.main_image, ...this.plant.images];
-            this.generals = [
-                { label: "Nom commun", value: this.plant.common_name },
-                { label: "Description", value: this.plant.description }
+            this.infos = [
+                { label: "Nom français", value: this.plant.name_fr },
+                { label: "Famille", value: this.plant.family },
+                { label: "Genre", value: this.plant.type },
+                { label: "Auteur", value: this.plant.discovery_author },
+                { label: "Année de découverte", value: this.plant.discovery_year },
+                { label: "Période de floraison", value: this.plant.blossoming },
+                { label: "Type écologique", value: this.plant.type_ecological + " - " + this.plant.type_ecological_desc },
+                { label: "Milieux", value: this.plant.environment },
+                { label: "Zone géographique", value: this.plant.site }
             ];
         }
     }

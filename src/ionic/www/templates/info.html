@@ -2,7 +2,7 @@
   <div class="bar bar-header bar-balanced">
     <h1 class="title">{{ctrl.title}}</h1>
   </div>
-  <ion-content class="has-header text-center" >
+  <ion-content class="has-header text-center">
     <div class="imgbox">
       <ion-slide-box>
         <ion-slide ng-repeat="imglink in ctrl.imgs">
@@ -11,16 +11,18 @@
       </ion-slide-box>
     </div>
     <div>
-      <div ng-if="ctrl.generals.length > 0">
-      <p>Informations générales:</p>
-        <div>
-          <div class="row" ng-repeat="info_g in ctrl.generals">
-            <div class="col text-left balanced-bg">{{info_g.label}}:</div>
-            <div class="col text-left">{{info_g.value}}</div>
-          </div>
-        </div>
+      <div>
+        <p class="info-desc">{{ctrl.desc}}</p>
+      </div>
+      <div ng-if="ctrl.infos.length > 0">
+        <p>Informations (<a href={{ctrl.ref}}>référence</a>):</p>
+        <table>
+          <tr class="row" ng-repeat="info in ctrl.infos">
+            <td class="col text-left balanced-bg">{{info.label}}:</td>
+            <td class="col text-left">{{info.value}}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </ion-content>
 </ion-view>
-
