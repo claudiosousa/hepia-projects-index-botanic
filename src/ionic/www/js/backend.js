@@ -8,20 +8,15 @@ var config = {
     messagingSenderId: "444976965133"
 };
 firebase.initializeApp(config);
-const db = firebase.firestore();
-db.settings({ timestampsInSnapshots: true });
+const db = firebase.database();
+//db.settings({ timestampsInSnapshots: true });
 
 angular.module('backend.firebase', [])
     .factory('backend', () => {
         return {
-            getPlant: (rfidId) =>
-                db.collection("plants")
-                    .where("rfid", "==", rfidId)
-                    .get()
-                    .then(doc => {
-                        if (doc.empty)
-                            throw "L'identifiant '" + rfidId + "' de plante n'a pas été trouvé";
-                        return doc.docs[0].data()
-                    })
+            getPlant: (rfid) =>
+                db.ref(`/plants/${rfid}`)
+                    .once('value')
+                    .then(doc => doc.val())
         }
     });
