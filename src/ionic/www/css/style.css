@@ -1,6 +1,6 @@
 /* General */
 ion-content.has-header {
-    margin-bottom: 44px; /* Correct scrolling bug with ion-content that has 'has-header' applied */
+    /*margin-bottom: 44px;*/ /* Correct scrolling bug with ion-content that has 'has-header' applied */
 }
 
 .info-desc {
